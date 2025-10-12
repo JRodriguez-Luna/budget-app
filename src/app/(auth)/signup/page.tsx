@@ -2,15 +2,39 @@
 
 import Form from 'next/form'
 import Link from 'next/link'
+import TypingText from '@/components/ui/shadcn-io/typing-text'
 
 export default function SignUp() {
     return (
         // Container
-        <div className="flex h-auto justify-between">
-            {/* Message */}
-            {/* <div className="">Text</div> */}
+        <div className="h-screen flex items-center justify-between">
+            {/* Message - left */}
+            <div className="w-1/2 font-semibold text-slate-200">
+            <h3 className="text-5xl mb-2">Start Your Financial Journey with</h3>
+            <h2 className="text-7xl bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 bg-clip-text text-transparent">
+                AbrupterBudget
+            </h2>
+            <TypingText
+                text={[
+                "Transform your budget into a growth game",
+                "Smart goals. Real progress. Proven results.",
+                "Gamified saving that actually works",
+                "Where finance meets motivation",
+                "The fun way to master your money",
+                "Research-backed budgeting at its best",
+                ]}
+                typingSpeed={75}
+                pauseDuration={1500}
+                showCursor={true}
+                cursorCharacter="$"
+                className="text-4xl font-bold mt-4"
+                textColors={["#8b5cf6", "#3b82f6", "#06b6d4"]}
+                variableSpeed={{ min: 50, max: 120 }}
+            />
+        </div>
 
-            {/* Sign Up form */}
+
+            {/* Sign Up form - right */}
             <Form className='flex border rounded-xl items-center text-center p-5 border-slate-700 bg-slate-800 font-semibold' action="/signup">
                 <div className='flex flex-col gap-5'>
                     {/* Title */}
