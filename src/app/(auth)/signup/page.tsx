@@ -8,7 +8,7 @@ import { BackgroundGradient } from '@/components/ui/shadcn-io/background-gradien
 export default function SignUp() {
     return (
         // Container
-        <div className="h-screen flex items-center justify-evenly">
+        <div className="h-full p-10 flex max-sm:flex-col sm:flex-row items-center justify-evenly">
             {/* Message - left */}
             <div className="w-1/2 font-semibold text-slate-200">
             <h3 className="text-5xl mb-2">Start Your Financial Journey with</h3>
