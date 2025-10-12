@@ -35,7 +35,10 @@ export default function SignUp() {
 
 
             {/* Sign Up form - right */}
-            <Form className='flex border rounded-xl items-center text-center p-5 border-slate-700 bg-slate-800 font-semibold' action="/signup">
+            <Form className='flex border border-t-slate-500 border-t-4 bg-gradient-to-r rounded-xl items-center text-center 
+                p-5 border-slate-700 bg-slate-800 font-semibold' 
+                action="/signup">
+                                
                 <div className='flex flex-col gap-5'>
                     {/* Title */}
                     <div className='flex flex-col'>
