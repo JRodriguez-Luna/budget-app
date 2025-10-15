@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 'use client';
 
 import { cn } from "../../../../lib/utils";
@@ -6,6 +7,7 @@ import { createNoise3D } from "simplex-noise";
 import { motion } from "framer-motion";
 
 interface VortexProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   children?: any;
   className?: string;
   containerClassName?: string;
