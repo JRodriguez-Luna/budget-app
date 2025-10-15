@@ -1,25 +1,51 @@
 'use client'
 
+import BlurText from "@/components/ui/shadcn-io/blur-text"
+import { Vortex } from "@/components/ui/shadcn-io/vortex"
+
 export default function SignInPage() {
     return (
         // Container
         <div className="min-h-screen flex flex-col justify-center items-center text-center p-4">
+            <Vortex
+                backgroundColor="black"
+                rangeY={800}
+                particleCount={100}
+                baseHue={120}
+                className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"
+            >
+
             {/* Sign in form - Left */}
             <div className="flex flex-col items-center gap-5">
                 {/* title */}
-                <div className="">
-                    <h3 className="text-4xl font-semibold">AbrupterBudget</h3>
+                <div className="flex flex-col gap-1 font-semibold">                    
+                    <h2 className="text-6xl max-sm:text-5xl bg-gradient-to-r from-emerald-500 via-blue-500 to-cyan-500 bg-clip-text text-transparent">
+                        AbrupterBudget
+                    </h2>
                     <p className="text-sm text-slate-400 hidden">Smart emergency fund management for life&apos;s unexpected moments</p>
                 </div>
 
                 {/* welcome back */}
-                <div className="">
-                    <h3 className="text-3xl font-semibold">Welcome back</h3>
-                    <p className="text-sm text-slate-400">Sign in to your account to continue mananing your funds</p>
+                <div className="flex flex-col items-center">
+                    <BlurText
+                    text="Welcome Back"
+                    delay={150}
+                    animateBy="words"
+                    direction="top"
+                    className="text-3xl font-semibold"
+                    />
+
+                    <BlurText
+                    text="Sign in to your account to continue mananing your funds"
+                    delay={150}
+                    animateBy="words"
+                    direction="top"
+                    className="text-sm text-slate-400"
+                    />
                 </div>
 
                 {/* Form Signin */}
-                <form className='flex flex-col justify-between gap-5 w-full' action="">
+                <form className='flex flex-col justify-between gap-5 w-full font-semibold' action="">
                     {/* email */}
                     <label className='flex flex-col items-start w-full' htmlFor="email">
                         Email
@@ -55,8 +81,8 @@ export default function SignInPage() {
                     <button className='w-full 
                         bg-gradient-to-r
                         from-blue-500
-                        to-purple-500
-                        hover:from-purple-500 
+                        to-emerald-500
+                        hover:from-emerald-500 
                         hover:to-blue-500
                         transform transition duration-300 ease-in-out
                         items-center p-2 rounded cursor-pointer font-semibold' 
@@ -78,6 +104,8 @@ export default function SignInPage() {
                     </div>
                 </form>
             </div>
+
+            </Vortex>
         </div>
     )
 }
