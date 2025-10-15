@@ -128,7 +128,7 @@ export default function SignUp() {
                             {/* Divider style */}
                             <div className='flex h-0 w-full items-center font-normal'>
                                 <div className='w-full h-[1px] items-center justify-center bg-slate-500'></div>
-                                <div className='mx-3 text-slate-500 text-xs whitespace-nowrap'>or sign up with</div>
+                                <div className='mx-3 text-slate-500 text-xs whitespace-nowrap'>Or sign up with</div>
                                 <div className='w-full h-[1px] items-center justify-center bg-slate-500'></div>
                             </div>
 
