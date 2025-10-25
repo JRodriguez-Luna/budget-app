@@ -5,6 +5,9 @@ import Link from 'next/link'
 import TypingText from '@/components/ui/shadcn-io/typing-text'
 import { BackgroundGradient } from '@/components/ui/shadcn-io/background-gradient'
 
+import { signIn } from "next-auth/react"
+
+
 export default function SignUp() {
     return (
         // Container
@@ -43,7 +46,7 @@ export default function SignUp() {
                     <Form className='flex rounded-xl items-center 
                         text-center
                         p-5 font-semibold' 
-                        action="/signup">
+                        action={""}>
                                     
                         <div className='flex flex-col gap-5 w-full'>
                             {/* Title */}
@@ -134,8 +137,9 @@ export default function SignUp() {
 
                             {/* Temp Auth buttons */}
                             <div className='flex justify-between items-center gap-3'>
-                                <button type='button' className='w-full border border-slate-500 bg-slate-700 rounded py-2 cursor-pointer text-sm'>Google</button>
-                                <button type='button' className='w-full border border-slate-500 bg-slate-700 rounded py-2 cursor-pointer text-sm'>Apple</button>
+                                <button onClick={() => signIn("google", { redirectTo: '/' })} type='button' className='w-full border border-slate-500 bg-slate-700 rounded py-2 cursor-pointer text-sm'>Google</button>
+                                {/* Apple has not been set for OAuth! */}
+                                <button onClick={() => signIn("apple", { redirectTo: '/' })} type='button' className='w-full border border-slate-500 bg-slate-700 rounded py-2 cursor-pointer text-sm'>Apple</button>
                             </div>
                         </div>
                     </Form>

@@ -3,6 +3,8 @@
 import BlurText from "@/components/ui/shadcn-io/blur-text"
 import { Vortex } from "@/components/ui/shadcn-io/vortex"
 
+import { signIn } from "next-auth/react"
+
 export default function SignInPage() {
     return (
         // Container
@@ -99,8 +101,9 @@ export default function SignInPage() {
 
                     {/* Temp Auth buttons */}
                     <div className='flex justify-between items-center gap-3'>
-                        <button type='button' className='w-full border border-slate-500 bg-slate-700 rounded py-2 cursor-pointer text-sm'>Google</button>
-                        <button type='button' className='w-full border border-slate-500 bg-slate-700 rounded py-2 cursor-pointer text-sm'>Apple</button>
+                        <button onClick={() => signIn("google", { redirectTo: '/' })} type='button' className='w-full border border-slate-500 bg-slate-700 rounded py-2 cursor-pointer text-sm'>Google</button>
+                        {/* Apple has not been set for OAuth! */}
+                        <button onClick={() => signIn("apple", { redirectTo: '/'})} type='button' className='w-full border border-slate-500 bg-slate-700 rounded py-2 cursor-pointer text-sm'>Apple</button>
                     </div>
                 </form>
             </div>
