@@ -137,7 +137,7 @@ export default function SignUp() {
 
                             {/* Temp Auth buttons */}
                             <div className='flex justify-between items-center gap-3'>
-                                <button onClick={() => signIn("google", { redirectTo: '/' })} type='button' className='w-full border border-slate-500 bg-slate-700 rounded py-2 cursor-pointer text-sm'>Google</button>
+                                <button onClick={() => signIn("google", { redirectTo: '/dashboard' })} type='button' className='w-full border border-slate-500 bg-slate-700 rounded py-2 cursor-pointer text-sm'>Google</button>
                                 {/* Apple has not been set for OAuth! */}
                                 <button onClick={() => signIn("apple", { redirectTo: '/' })} type='button' className='w-full border border-slate-500 bg-slate-700 rounded py-2 cursor-pointer text-sm'>Apple</button>
                             </div>
