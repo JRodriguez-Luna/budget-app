@@ -2,7 +2,7 @@
 
 import BlurText from "@/components/ui/shadcn-io/blur-text"
 import { Vortex } from "@/components/ui/shadcn-io/vortex"
-
+import Link from "next/link"
 import { signIn } from "next-auth/react"
 
 export default function SignInPage() {
@@ -105,6 +105,12 @@ export default function SignInPage() {
                         {/* Apple has not been set for OAuth! */}
                         <button onClick={() => signIn("apple", { redirectTo: '/'})} type='button' className='w-full border border-slate-500 bg-slate-700 rounded py-2 cursor-pointer text-sm'>Apple</button>
                     </div>
+
+                    <p className='text-slate-500 font-normal text-sm'>
+                        Don&apos;t have an account?
+                        {' '}
+                        <Link className='text-blue-500 font-semibold hover:text-blue-400 transform transition duration-300 ease-in-out' href='/signup'>Sign Up</Link>
+                    </p>
                 </form>
             </div>
 

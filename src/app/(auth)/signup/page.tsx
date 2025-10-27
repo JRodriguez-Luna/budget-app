@@ -4,11 +4,11 @@ import Form from 'next/form'
 import Link from 'next/link'
 import TypingText from '@/components/ui/shadcn-io/typing-text'
 import { BackgroundGradient } from '@/components/ui/shadcn-io/background-gradient'
-
 import { signIn } from "next-auth/react"
 
 
 export default function SignUp() {
+
     return (
         // Container
         <div className="min-h-screen sm:p-10 p-4 flex flex-wrap flex-col sm:flex-row items-center text-center justify-evenly max-sm:justify-center gap-5">
@@ -64,7 +64,9 @@ export default function SignUp() {
                                     id='firstName' 
                                     name='firstName'
                                     placeholder='John'
-                                    type="text" />
+                                    type="text" 
+                                    required
+                                    />
                                 </label>
                                 
                                 {/* Last Name */}
@@ -74,7 +76,9 @@ export default function SignUp() {
                                     id='lastName' 
                                     name='lastName' 
                                     placeholder='Doe'
-                                    type="text" />
+                                    type="text" 
+                                    required
+                                    />
                                 </label>
                             </div>
 
@@ -85,7 +89,9 @@ export default function SignUp() {
                                 id='email' 
                                 name='email' 
                                 placeholder='john@example.com'
-                                type="email" />
+                                type="email" 
+                                required
+                                />
                             </label>
 
                             {/* password Input */}
@@ -95,7 +101,9 @@ export default function SignUp() {
                                 id='password' 
                                 name='password' 
                                 placeholder='Create a strong password'
-                                type="password" />
+                                type="password" 
+                                required
+                                />
                             </label>
 
                             {/* confirm password Input */}
@@ -121,7 +129,7 @@ export default function SignUp() {
                                 Create Account
                             </button>
 
-                            {/* Sign in Redictory */}
+                            {/* Sign in redirect */}
                             <p className='text-slate-500 font-normal text-sm'>
                                 Already have an account?
                                 {' '}

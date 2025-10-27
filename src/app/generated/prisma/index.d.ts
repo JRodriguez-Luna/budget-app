@@ -2183,6 +2183,7 @@ export namespace Prisma {
     name: string | null
     email: string | null
     emailVerified: Date | null
+    password: string | null
     image: string | null
     xp: number | null
     level: number | null
@@ -2195,6 +2196,7 @@ export namespace Prisma {
     name: string | null
     email: string | null
     emailVerified: Date | null
+    password: string | null
     image: string | null
     xp: number | null
     level: number | null
@@ -2207,6 +2209,7 @@ export namespace Prisma {
     name: number
     email: number
     emailVerified: number
+    password: number
     image: number
     xp: number
     level: number
@@ -2231,6 +2234,7 @@ export namespace Prisma {
     name?: true
     email?: true
     emailVerified?: true
+    password?: true
     image?: true
     xp?: true
     level?: true
@@ -2243,6 +2247,7 @@ export namespace Prisma {
     name?: true
     email?: true
     emailVerified?: true
+    password?: true
     image?: true
     xp?: true
     level?: true
@@ -2255,6 +2260,7 @@ export namespace Prisma {
     name?: true
     email?: true
     emailVerified?: true
+    password?: true
     image?: true
     xp?: true
     level?: true
@@ -2354,6 +2360,7 @@ export namespace Prisma {
     name: string | null
     email: string
     emailVerified: Date | null
+    password: string | null
     image: string | null
     xp: number
     level: number
@@ -2385,6 +2392,7 @@ export namespace Prisma {
     name?: boolean
     email?: boolean
     emailVerified?: boolean
+    password?: boolean
     image?: boolean
     xp?: boolean
     level?: boolean
@@ -2407,6 +2415,7 @@ export namespace Prisma {
     name?: boolean
     email?: boolean
     emailVerified?: boolean
+    password?: boolean
     image?: boolean
     xp?: boolean
     level?: boolean
@@ -2419,6 +2428,7 @@ export namespace Prisma {
     name?: boolean
     email?: boolean
     emailVerified?: boolean
+    password?: boolean
     image?: boolean
     xp?: boolean
     level?: boolean
@@ -2431,6 +2441,7 @@ export namespace Prisma {
     name?: boolean
     email?: boolean
     emailVerified?: boolean
+    password?: boolean
     image?: boolean
     xp?: boolean
     level?: boolean
@@ -2438,7 +2449,7 @@ export namespace Prisma {
     updatedAt?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "email" | "emailVerified" | "image" | "xp" | "level" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "email" | "emailVerified" | "password" | "image" | "xp" | "level" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     accounts?: boolean | User$accountsArgs<ExtArgs>
     sessions?: boolean | User$sessionsArgs<ExtArgs>
@@ -2472,6 +2483,7 @@ export namespace Prisma {
       name: string | null
       email: string
       emailVerified: Date | null
+      password: string | null
       image: string | null
       xp: number
       level: number
@@ -2913,6 +2925,7 @@ export namespace Prisma {
     readonly name: FieldRef<"User", 'String'>
     readonly email: FieldRef<"User", 'String'>
     readonly emailVerified: FieldRef<"User", 'DateTime'>
+    readonly password: FieldRef<"User", 'String'>
     readonly image: FieldRef<"User", 'String'>
     readonly xp: FieldRef<"User", 'Int'>
     readonly level: FieldRef<"User", 'Int'>
@@ -16898,6 +16911,7 @@ export namespace Prisma {
     name: 'name',
     email: 'email',
     emailVerified: 'emailVerified',
+    password: 'password',
     image: 'image',
     xp: 'xp',
     level: 'level',
@@ -17167,6 +17181,7 @@ export namespace Prisma {
     name?: StringNullableFilter<"User"> | string | null
     email?: StringFilter<"User"> | string
     emailVerified?: DateTimeNullableFilter<"User"> | Date | string | null
+    password?: StringNullableFilter<"User"> | string | null
     image?: StringNullableFilter<"User"> | string | null
     xp?: IntFilter<"User"> | number
     level?: IntFilter<"User"> | number
@@ -17188,6 +17203,7 @@ export namespace Prisma {
     name?: SortOrderInput | SortOrder
     email?: SortOrder
     emailVerified?: SortOrderInput | SortOrder
+    password?: SortOrderInput | SortOrder
     image?: SortOrderInput | SortOrder
     xp?: SortOrder
     level?: SortOrder
@@ -17212,6 +17228,7 @@ export namespace Prisma {
     NOT?: UserWhereInput | UserWhereInput[]
     name?: StringNullableFilter<"User"> | string | null
     emailVerified?: DateTimeNullableFilter<"User"> | Date | string | null
+    password?: StringNullableFilter<"User"> | string | null
     image?: StringNullableFilter<"User"> | string | null
     xp?: IntFilter<"User"> | number
     level?: IntFilter<"User"> | number
@@ -17233,6 +17250,7 @@ export namespace Prisma {
     name?: SortOrderInput | SortOrder
     email?: SortOrder
     emailVerified?: SortOrderInput | SortOrder
+    password?: SortOrderInput | SortOrder
     image?: SortOrderInput | SortOrder
     xp?: SortOrder
     level?: SortOrder
@@ -17253,6 +17271,7 @@ export namespace Prisma {
     name?: StringNullableWithAggregatesFilter<"User"> | string | null
     email?: StringWithAggregatesFilter<"User"> | string
     emailVerified?: DateTimeNullableWithAggregatesFilter<"User"> | Date | string | null
+    password?: StringNullableWithAggregatesFilter<"User"> | string | null
     image?: StringNullableWithAggregatesFilter<"User"> | string | null
     xp?: IntWithAggregatesFilter<"User"> | number
     level?: IntWithAggregatesFilter<"User"> | number
@@ -18083,6 +18102,7 @@ export namespace Prisma {
     name?: string | null
     email: string
     emailVerified?: Date | string | null
+    password?: string | null
     image?: string | null
     xp?: number
     level?: number
@@ -18104,6 +18124,7 @@ export namespace Prisma {
     name?: string | null
     email: string
     emailVerified?: Date | string | null
+    password?: string | null
     image?: string | null
     xp?: number
     level?: number
@@ -18125,6 +18146,7 @@ export namespace Prisma {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
     xp?: IntFieldUpdateOperationsInput | number
     level?: IntFieldUpdateOperationsInput | number
@@ -18146,6 +18168,7 @@ export namespace Prisma {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
     xp?: IntFieldUpdateOperationsInput | number
     level?: IntFieldUpdateOperationsInput | number
@@ -18167,6 +18190,7 @@ export namespace Prisma {
     name?: string | null
     email: string
     emailVerified?: Date | string | null
+    password?: string | null
     image?: string | null
     xp?: number
     level?: number
@@ -18179,6 +18203,7 @@ export namespace Prisma {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
     xp?: IntFieldUpdateOperationsInput | number
     level?: IntFieldUpdateOperationsInput | number
@@ -18191,6 +18216,7 @@ export namespace Prisma {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
     xp?: IntFieldUpdateOperationsInput | number
     level?: IntFieldUpdateOperationsInput | number
@@ -19204,6 +19230,7 @@ export namespace Prisma {
     name?: SortOrder
     email?: SortOrder
     emailVerified?: SortOrder
+    password?: SortOrder
     image?: SortOrder
     xp?: SortOrder
     level?: SortOrder
@@ -19221,6 +19248,7 @@ export namespace Prisma {
     name?: SortOrder
     email?: SortOrder
     emailVerified?: SortOrder
+    password?: SortOrder
     image?: SortOrder
     xp?: SortOrder
     level?: SortOrder
@@ -19233,6 +19261,7 @@ export namespace Prisma {
     name?: SortOrder
     email?: SortOrder
     emailVerified?: SortOrder
+    password?: SortOrder
     image?: SortOrder
     xp?: SortOrder
     level?: SortOrder
@@ -21396,6 +21425,7 @@ export namespace Prisma {
     name?: string | null
     email: string
     emailVerified?: Date | string | null
+    password?: string | null
     image?: string | null
     xp?: number
     level?: number
@@ -21416,6 +21446,7 @@ export namespace Prisma {
     name?: string | null
     email: string
     emailVerified?: Date | string | null
+    password?: string | null
     image?: string | null
     xp?: number
     level?: number
@@ -21452,6 +21483,7 @@ export namespace Prisma {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
     xp?: IntFieldUpdateOperationsInput | number
     level?: IntFieldUpdateOperationsInput | number
@@ -21472,6 +21504,7 @@ export namespace Prisma {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
     xp?: IntFieldUpdateOperationsInput | number
     level?: IntFieldUpdateOperationsInput | number
@@ -21492,6 +21525,7 @@ export namespace Prisma {
     name?: string | null
     email: string
     emailVerified?: Date | string | null
+    password?: string | null
     image?: string | null
     xp?: number
     level?: number
@@ -21512,6 +21546,7 @@ export namespace Prisma {
     name?: string | null
     email: string
     emailVerified?: Date | string | null
+    password?: string | null
     image?: string | null
     xp?: number
     level?: number
@@ -21548,6 +21583,7 @@ export namespace Prisma {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
     xp?: IntFieldUpdateOperationsInput | number
     level?: IntFieldUpdateOperationsInput | number
@@ -21568,6 +21604,7 @@ export namespace Prisma {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
     xp?: IntFieldUpdateOperationsInput | number
     level?: IntFieldUpdateOperationsInput | number
@@ -21588,6 +21625,7 @@ export namespace Prisma {
     name?: string | null
     email: string
     emailVerified?: Date | string | null
+    password?: string | null
     image?: string | null
     xp?: number
     level?: number
@@ -21608,6 +21646,7 @@ export namespace Prisma {
     name?: string | null
     email: string
     emailVerified?: Date | string | null
+    password?: string | null
     image?: string | null
     xp?: number
     level?: number
@@ -21644,6 +21683,7 @@ export namespace Prisma {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
     xp?: IntFieldUpdateOperationsInput | number
     level?: IntFieldUpdateOperationsInput | number
@@ -21664,6 +21704,7 @@ export namespace Prisma {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
     xp?: IntFieldUpdateOperationsInput | number
     level?: IntFieldUpdateOperationsInput | number
@@ -21684,6 +21725,7 @@ export namespace Prisma {
     name?: string | null
     email: string
     emailVerified?: Date | string | null
+    password?: string | null
     image?: string | null
     xp?: number
     level?: number
@@ -21704,6 +21746,7 @@ export namespace Prisma {
     name?: string | null
     email: string
     emailVerified?: Date | string | null
+    password?: string | null
     image?: string | null
     xp?: number
     level?: number
@@ -21798,6 +21841,7 @@ export namespace Prisma {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
     xp?: IntFieldUpdateOperationsInput | number
     level?: IntFieldUpdateOperationsInput | number
@@ -21818,6 +21862,7 @@ export namespace Prisma {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
     xp?: IntFieldUpdateOperationsInput | number
     level?: IntFieldUpdateOperationsInput | number
@@ -21870,6 +21915,7 @@ export namespace Prisma {
     name?: string | null
     email: string
     emailVerified?: Date | string | null
+    password?: string | null
     image?: string | null
     xp?: number
     level?: number
@@ -21890,6 +21936,7 @@ export namespace Prisma {
     name?: string | null
     email: string
     emailVerified?: Date | string | null
+    password?: string | null
     image?: string | null
     xp?: number
     level?: number
@@ -21949,6 +21996,7 @@ export namespace Prisma {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
     xp?: IntFieldUpdateOperationsInput | number
     level?: IntFieldUpdateOperationsInput | number
@@ -21969,6 +22017,7 @@ export namespace Prisma {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
     xp?: IntFieldUpdateOperationsInput | number
     level?: IntFieldUpdateOperationsInput | number
@@ -22018,6 +22067,7 @@ export namespace Prisma {
     name?: string | null
     email: string
     emailVerified?: Date | string | null
+    password?: string | null
     image?: string | null
     xp?: number
     level?: number
@@ -22038,6 +22088,7 @@ export namespace Prisma {
     name?: string | null
     email: string
     emailVerified?: Date | string | null
+    password?: string | null
     image?: string | null
     xp?: number
     level?: number
@@ -22097,6 +22148,7 @@ export namespace Prisma {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
     xp?: IntFieldUpdateOperationsInput | number
     level?: IntFieldUpdateOperationsInput | number
@@ -22117,6 +22169,7 @@ export namespace Prisma {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
     xp?: IntFieldUpdateOperationsInput | number
     level?: IntFieldUpdateOperationsInput | number
@@ -22166,6 +22219,7 @@ export namespace Prisma {
     name?: string | null
     email: string
     emailVerified?: Date | string | null
+    password?: string | null
     image?: string | null
     xp?: number
     level?: number
@@ -22186,6 +22240,7 @@ export namespace Prisma {
     name?: string | null
     email: string
     emailVerified?: Date | string | null
+    password?: string | null
     image?: string | null
     xp?: number
     level?: number
@@ -22222,6 +22277,7 @@ export namespace Prisma {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
     xp?: IntFieldUpdateOperationsInput | number
     level?: IntFieldUpdateOperationsInput | number
@@ -22242,6 +22298,7 @@ export namespace Prisma {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
     xp?: IntFieldUpdateOperationsInput | number
     level?: IntFieldUpdateOperationsInput | number
@@ -22300,6 +22357,7 @@ export namespace Prisma {
     name?: string | null
     email: string
     emailVerified?: Date | string | null
+    password?: string | null
     image?: string | null
     xp?: number
     level?: number
@@ -22320,6 +22378,7 @@ export namespace Prisma {
     name?: string | null
     email: string
     emailVerified?: Date | string | null
+    password?: string | null
     image?: string | null
     xp?: number
     level?: number
@@ -22379,6 +22438,7 @@ export namespace Prisma {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
     xp?: IntFieldUpdateOperationsInput | number
     level?: IntFieldUpdateOperationsInput | number
@@ -22399,6 +22459,7 @@ export namespace Prisma {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
     xp?: IntFieldUpdateOperationsInput | number
     level?: IntFieldUpdateOperationsInput | number
@@ -22492,6 +22553,7 @@ export namespace Prisma {
     name?: string | null
     email: string
     emailVerified?: Date | string | null
+    password?: string | null
     image?: string | null
     xp?: number
     level?: number
@@ -22512,6 +22574,7 @@ export namespace Prisma {
     name?: string | null
     email: string
     emailVerified?: Date | string | null
+    password?: string | null
     image?: string | null
     xp?: number
     level?: number
@@ -22577,6 +22640,7 @@ export namespace Prisma {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
     xp?: IntFieldUpdateOperationsInput | number
     level?: IntFieldUpdateOperationsInput | number
@@ -22597,6 +22661,7 @@ export namespace Prisma {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
     xp?: IntFieldUpdateOperationsInput | number
     level?: IntFieldUpdateOperationsInput | number
