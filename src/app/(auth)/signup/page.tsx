@@ -5,6 +5,7 @@ import Link from 'next/link'
 import TypingText from '@/components/ui/shadcn-io/typing-text'
 import { BackgroundGradient } from '@/components/ui/shadcn-io/background-gradient'
 import { signIn } from "next-auth/react"
+import { SignUpActions } from '@/lib/actions'
 
 
 export default function SignUp() {
@@ -46,7 +47,7 @@ export default function SignUp() {
                     <Form className='flex rounded-xl items-center 
                         text-center
                         p-5 font-semibold' 
-                        action={""}>
+                        action={SignUpActions}>
                                     
                         <div className='flex flex-col gap-5 w-full'>
                             {/* Title */}
