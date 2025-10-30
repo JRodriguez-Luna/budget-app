@@ -4,6 +4,7 @@ import BlurText from "@/components/ui/shadcn-io/blur-text"
 import { Vortex } from "@/components/ui/shadcn-io/vortex"
 import Link from "next/link"
 import { signIn } from "next-auth/react"
+import { SignInActions } from "@/lib/actions"
 
 export default function SignInPage() {
     return (
@@ -47,7 +48,7 @@ export default function SignInPage() {
                 </div>
 
                 {/* Form Signin */}
-                <form className='flex flex-col justify-between gap-5 w-full font-semibold' action="">
+                <form className='flex flex-col justify-between gap-5 w-full font-semibold' action={SignInActions}>
                     {/* email */}
                     <label className='flex flex-col items-start w-full' htmlFor="email">
                         Email

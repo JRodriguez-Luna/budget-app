@@ -26,3 +26,23 @@ export async function SignUpActions(formData: FormData) {
 
     redirect('/signin')
 }
+
+// GET - sign user in
+export async function SignInActions(formData: FormData) {
+    const email = formData.get('email') as string
+    const password = formData.get('password') as string
+
+    // Find user in database
+    const validUser  = await prisma.user.findUnique({
+        where: {email, password}
+    })
+
+    // If user doesnt exists, throw error
+    if (!validUser) {
+        console.error('No user exists.')
+    }
+
+    // redirect to dashboard
+    redirect('/dashboard')
+
+}
