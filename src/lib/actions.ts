@@ -1,48 +1,47 @@
-"use server"    // <- this marks all the export functions within the file
-                // as Server Actions
-                // Any functions included that are not used will automatically be removed
-                // from the final application bundle.
+'use server'; // <- this marks all the export functions within the file
+// as Server Actions
+// Any functions included that are not used will automatically be removed
+// from the final application bundle.
 
-import { redirect } from "next/navigation"
-import prisma from "./prisma"
+import { auth } from './auth';
+import { headers } from 'next/headers';
 
-// POST - create user at signup
-export async function SignUpActions(formData: FormData) {
-    const firstName = formData.get('firstName') as string
-    const lastName = formData.get('lastName') as string
-    const email = formData.get('email') as string
-    const password = formData.get('password') as string
-
-    const user = await prisma.user.create({
-        data: {
-            name: `${firstName} ${lastName}`,
+// Create user
+export const signUp = async (
+    email: string,
+    password: string,
+    name: string,
+) => {
+    const res = await auth.api.signUpEmail({
+        body: {
             email,
-            password
-        }
-    })
+            password,
+            name,
+            callbackURL: '/dashboard',
+        },
+    });
 
-    // Console logs onto the terminal
-    console.log('User created successfully:', user)
+    return res;
+};
 
-    redirect('/signin')
-}
+// Sign user in
+export const signIn = async (email: string, password: string) => {
+    const res = await auth.api.signInEmail({
+        body: {
+            email,
+            password,
+            callbackURL: '/dashboard',
+        },
+    });
 
-// GET - sign user in
-export async function SignInActions(formData: FormData) {
-    const email = formData.get('email') as string
-    const password = formData.get('password') as string
+    return res;
+};
 
-    // Find user in database
-    const validUser  = await prisma.user.findUnique({
-        where: {email, password}
-    })
+// Sign user out
+export const signOut = async () => {
+    const res = await auth.api.signOut({
+        headers: await headers(),
+    });
 
-    // If user doesnt exists, throw error
-    if (!validUser) {
-        console.error('No user exists.')
-    }
-
-    // redirect to dashboard
-    redirect('/dashboard')
-
-}
+    return res;
+};
